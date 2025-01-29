@@ -1,0 +1,257 @@
+.card{
+    background-image: url(../image/chuva.jpg);
+    background-size: cover;
+    width: 80%;
+    max-width: 1200px;
+    height: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.c_logo{
+    width: 150px;
+}
+
+.burguer{
+    display: none;
+}
+
+.c_nav{
+    background-color: rgba(59, 59, 59, 0.356);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+    border-radius: 0 20px 20px 0;
+
+    animation: nav 1s ease-in-out forwards;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+.search input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+    width: 100%;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.search button{
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+
+    transition: all .5s;
+}
+
+.search button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+
+.dado_menu{
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+.dado_menu p{
+    margin-top: 10px;
+}
+
+.dado_menu h2{
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+.lat_lon{
+    font-size: .7em;
+}
+
+.wind{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+
+}
+
+.name_and_day{
+    margin-bottom: 50px;
+
+    transform: translateY(100%);
+    opacity: 0;
+    animation: up 1s ease-in-out forwards;
+
+}
+
+.i_celsius{
+    font-size: 5em;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: up 1s ease-in-out forwards;
+}
+
+.i_cidade{
+    font-size: 1.5em;
+}
+
+.i_2{
+    width: 100%;
+}
+
+
+
+.i_days{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 10px;
+    overflow-x: auto;
+    
+    
+    scrollbar-width: none;
+
+    transform: translateY(100%);
+    opacity: 0;
+    animation: up 1s ease-in-out forwards;
+}
+
+.i_days div{
+    width: 90px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all .5s;
+}
+
+.i_days div:hover{
+    transform: scale(110%);
+}
+
+.i_days .date, .i_max_min{
+    font-size: .8em;
+}
+
+.i_max_min .warm{
+    color: rgb(255, 95, 95);
+}
+
+.i_max_min .cold{
+    color: rgb(42, 151, 253);
+}
+
+
+@keyframes nav {
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes up {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1120px) {
+    .card{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .c_logo{
+        width: 100px;
+        height: 19px;
+    }
+    .c_nav{
+        width: 50%;
+        transition: all 1s;
+        animation: none;
+        z-index: 999;
+    }
+
+    .burguer{
+        display: block;
+        cursor: pointer;
+        margin-right: 1%;
+        
+    
+        transition: all .5s;
+    }
+    
+    .burguer:hover{
+        transform: scale(110%);
+    }
+
+    .open{
+        animation: nav 1s ease-in-out forwards;
+    }
+
+    .burguer_open{
+        margin-right: 50%;
+        animation: rotate .5s ease-in-out forwards;
+    }
+
+    .info{
+        width: 90%;
+        padding: 0;
+    }
+
+    .i_celsius{
+        width: 80%;
+        font-size: 3em;
+    }
+
+    .i_days{
+        width: 100%;
+    }
+
+    
+
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}
