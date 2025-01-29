@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/EasyClimate/static/css/main.686e7234.css",
+    "main.js": "/EasyClimate/static/js/main.0e82aff0.js",
+    "static/js/488.c902710c.chunk.js": "/EasyClimate/static/js/488.c902710c.chunk.js",
+    "static/media/chuva.jpg": "/EasyClimate/static/media/chuva.94d448c802db3327d6c9.jpg",
+    "static/media/Louis George Cafe Bold.ttf": "/EasyClimate/static/media/Louis George Cafe Bold.d231532dff7238f82e0d.ttf",
+    "static/media/logo.png": "/EasyClimate/static/media/logo.12d216da7ed368aa9d49.png",
+    "index.html": "/EasyClimate/index.html",
+    "main.686e7234.css.map": "/EasyClimate/static/css/main.686e7234.css.map",
+    "main.0e82aff0.js.map": "/EasyClimate/static/js/main.0e82aff0.js.map",
+    "488.c902710c.chunk.js.map": "/EasyClimate/static/js/488.c902710c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.686e7234.css",
+    "static/js/main.0e82aff0.js"
+  ]
+}
